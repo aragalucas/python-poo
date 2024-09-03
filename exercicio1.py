@@ -18,9 +18,21 @@ def __str__(self) -> str:
         f"\nCEP: {self.cidade}"
             }
 
-class Funcionario:
+class Funcionario(ABC):
     def __init__(self, nome: str, telefone: str, email: str, endereco: str) -> None:
         self.nome = nome
         self.telefone = telefone
         self.email = email
         self.endereco = endereco
+
+@abstractmethod
+def salario_final(self) -> float:
+    pass
+
+def __str__(self) -> str:
+    return {f"\nNome: {self.nome}"
+            f"\nTelefone: {self.telefone}"
+            f"\nE-mail: {self.email}"
+            f"\nSalario: {self.salario_final()}"
+            f"\nEndereço: {self.endereco}"
+    }
